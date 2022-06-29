@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -48,4 +50,7 @@ func main() {
 	default:
 		fmt.Println("Unknown operation")
 	}
+	
+	fmt.Print("Press 'Enter' to continue...")
+  	bufio.NewReader(os.Stdin).ReadBytes('\n') 
 }

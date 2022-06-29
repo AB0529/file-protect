@@ -33,7 +33,7 @@ func main() {
 			panic(err)
 		}
 		
-		fmt.Printf("Success, file now encoded as: %s", outputPath)
+		fmt.Printf("Success, file now encoded as: %s", outputPath + "-enc")
 	case 2:
 		// Get the file path
 		var filepath string
@@ -46,11 +46,11 @@ func main() {
 			panic(err)
 		}
 		
-		fmt.Printf("Success, file now decoded as: %s", outputPath)
+		fmt.Printf("Success, file now decoded as: %s", outputPath + "-unenc")
 	default:
 		fmt.Println("Unknown operation")
 	}
 	
-	fmt.Println("Press 'Enter' to continue...")
+	fmt.Println("\nPress 'Enter' to continue...")
   	bufio.NewReader(os.Stdin).ReadBytes('\n') 
 }

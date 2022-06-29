@@ -14,6 +14,7 @@ func EncodeOperation(path string) (string, error) {
 	}
 	
 	// Convert to abs path
+	path += ".encoded"
 	path, err := filepath.Abs(path)
 	if err != nil {
 		panic(err)
@@ -35,6 +36,7 @@ func DecodeOperation(path string) (string, error) {
 	}
 
 	// Convert to abs path
+	path += ".encoded"
 	path, err := filepath.Abs(path)
 	if err != nil {
 		panic(err)

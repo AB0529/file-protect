@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"path/filepath"
 )
 
@@ -18,6 +19,7 @@ func EncodeOperation(path string) (string, error) {
 		panic(err)
 	}
 
+	fmt.Println("Encoding...")
 	output, err := EncryptFile(path, []byte(pw))
 	
 	return output, err
@@ -38,6 +40,7 @@ func DecodeOperation(path string) (string, error) {
 		panic(err)
 	}
 
+	fmt.Println("Decoding...")
 	output, err := UnencryptFile(path, []byte(pw))
 		
 	return output, err

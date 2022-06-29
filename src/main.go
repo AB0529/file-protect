@@ -51,6 +51,6 @@ func main() {
 		fmt.Println("Unknown operation")
 	}
 	
-	fmt.Print("Press 'Enter' to continue...")
+	fmt.Println("Press 'Enter' to continue...")
   	bufio.NewReader(os.Stdin).ReadBytes('\n') 
 }

@@ -41,7 +41,7 @@ func EncryptFile(path string, key []byte) (string, error) {
 	name := filepath.Base(path)
 
     // Create a new file for saving the encrypted data.
-    f2, err := os.Create(name + "-enc")
+    f2, err := os.Create("e-" + name)
     if err != nil {
         panic(err.Error())
     }
@@ -84,7 +84,7 @@ func UnencryptFile(path string, pw []byte) (string, error) {
 	name := filepath.Base(path)
 
     // Create a new file for saving the decrypted data.
-    f2, err := os.Create(name + "-unenc")
+    f2, err := os.Create("ue-" + name)
     if err != nil {
         panic(err.Error())
     }
